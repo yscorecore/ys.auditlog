@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YS.Hello", "src\YS.Hello\YS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YS.Hello.UnitTest", "test\YS.Hello.UnitTest\YS.Hello.UnitTest.csproj", "{2327D54C-ABA8-4CC3-8FEA-ACF52F0B7A11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YS.AuditLog.Core", "src\YS.AuditLog.Core\YS.AuditLog.Core.csproj", "{DD2C5FEB-C8C6-469F-A401-365CAB107AF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{2327D54C-ABA8-4CC3-8FEA-ACF52F0B7A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2327D54C-ABA8-4CC3-8FEA-ACF52F0B7A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2327D54C-ABA8-4CC3-8FEA-ACF52F0B7A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD2C5FEB-C8C6-469F-A401-365CAB107AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD2C5FEB-C8C6-469F-A401-365CAB107AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD2C5FEB-C8C6-469F-A401-365CAB107AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD2C5FEB-C8C6-469F-A401-365CAB107AF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{528C6869-0EF9-48BC-A183-601AFCCE50BD} = {6C7E5914-CD6B-40F1-BFD7-8FB17E3EAE11}
 		{2327D54C-ABA8-4CC3-8FEA-ACF52F0B7A11} = {9D50B35B-1EAA-4620-B0A6-245456051247}
+		{DD2C5FEB-C8C6-469F-A401-365CAB107AF2} = {6C7E5914-CD6B-40F1-BFD7-8FB17E3EAE11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB11BB21-3F5D-42D6-8737-F19C0666F1F8}

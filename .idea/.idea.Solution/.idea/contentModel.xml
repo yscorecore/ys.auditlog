@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.7.1/build/netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/2.1.2/build/_common/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/2.1.2/build/_common/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/2.1.2/build/netcoreapp1.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll" t="Include" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_Solution.-1964190153.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="LICENSE" t="Include" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="res/icon.png" t="Include" />
+      <e p="Solution.sln" t="IncludeFlat" />
+      <e p="src" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+        <e p="YS.AuditLog.Core" t="IncludeRecursive">
+          <e p="AuditLogAttribute.cs" t="Include" />
+          <e p="AuditLogRecord.cs" t="Include" />
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="IAuditLogContext.cs" t="Include" />
+          <e p="IAuditLogService.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="ThisAssembly.GitInfo.g.cs" t="Include" />
+                <e p="YS.AuditLog.Core.AssemblyInfo.cs" t="Include" />
+              </e>
+              <e p="netstandard2.1" t="Include">
+                <e p="ThisAssembly.GitInfo.g.cs" t="Include" />
+                <e p="YS.AuditLog.Core.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="YS.AuditLog.Core.csproj" t="IncludeRecursive" />
+        </e>
+        <e p="YS.Hello" t="IncludeRecursive">
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="Class1.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="ThisAssembly.GitInfo.g.cs" t="Include" />
+                <e p="YS.Hello.AssemblyInfo.cs" t="Include" />
+              </e>
+              <e p="netstandard2.1" t="Include">
+                <e p="ThisAssembly.GitInfo.g.cs" t="Include" />
+                <e p="YS.Hello.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="YS.Hello.csproj" t="IncludeRecursive" />
+        </e>
+      </e>
+      <e p="test" t="Include">
+        <e p="YS.Hello.UnitTest" t="IncludeRecursive">
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp3.1" t="Include">
+                <e p="YS.Hello.UnitTest.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="UnitTest1.cs" t="Include" />
+          <e p="YS.Hello.UnitTest.csproj" t="IncludeRecursive" />
+        </e>
+      </e>
+    </e>
+  </component>
+</project>
