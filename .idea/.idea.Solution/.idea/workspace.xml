@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ad34aff-175d-4bb4-b989-285113105970" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogRecord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/YS.AuditLog.Core/IAuditLogContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/YS.AuditLog.Core/IAuditLogService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Solution.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Solution.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogRecord.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/YS.AuditLog.Core/IAuditLogService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/YS.AuditLog.Core/IAuditLogService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/YS.AuditLog.Core/YS.AuditLog.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/YS.AuditLog.Core/YS.AuditLog.Core.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +38,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLog.cs" />
-        <option value="$PROJECT_DIR$/src/YS.AuditLog.Core/IAuditLogService.cs" />
         <option value="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogAttritube.cs" />
-        <option value="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogAttribute.cs" />
         <option value="$PROJECT_DIR$/src/YS.AuditLog.Core/IAutidLogContext.cs" />
         <option value="$PROJECT_DIR$/src/YS.AuditLog.Core/IAuditLogContext.cs" />
         <option value="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogRecord.cs" />
+        <option value="$PROJECT_DIR$/src/YS.AuditLog.Core/IAuditLogService.cs" />
+        <option value="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogAttribute.cs" />
       </list>
     </option>
   </component>
@@ -65,14 +65,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601356847279</updated>
-      <workItem from="1601356869389" duration="1012000" />
+      <workItem from="1601356869389" duration="1163000" />
+      <workItem from="1601375276434" duration="3043000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -84,6 +85,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

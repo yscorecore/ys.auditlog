@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace YS.AuditLog.Core
 {
@@ -6,4 +7,6 @@ namespace YS.AuditLog.Core
     {
         Task LogRecord(AuditLogRecord logRecord);
     }
+
+    
 }
