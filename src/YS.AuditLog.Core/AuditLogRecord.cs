@@ -10,12 +10,14 @@ namespace YS.AuditLog
         
         public string Operator { get; set; }
         
-        public string Category { get; set; }
+        public string ApplicationCode { get; set; }
         
+        public string ModuleCode { get; set; }
         public string OperationCode { get; set; }
 
         public bool Success { get; set; }
-        
+
+        public string Message { get; set; }
         public DateTimeOffset StartTime { get; set; }
         
         public DateTimeOffset EndTime { get; set; }

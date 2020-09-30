@@ -24,7 +24,6 @@
       <change beforePath="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogAttribute.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/YS.AuditLog.Core/AuditLogRecord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/YS.AuditLog.Core/IAuditLogService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/YS.AuditLog.Core/IAuditLogService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/YS.AuditLog.Core/YS.AuditLog.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/YS.AuditLog.Core/YS.AuditLog.Core.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +32,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/yangpengbo/Projects/ys.auditlog/src/YS.AuditLog.Core/IAuditLogService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -55,6 +57,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -66,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601356847279</updated>
       <workItem from="1601356869389" duration="1163000" />
-      <workItem from="1601375276434" duration="3043000" />
+      <workItem from="1601375276434" duration="8813000" />
     </task>
     <servers />
   </component>
@@ -91,9 +94,14 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="318" key="Rider.ProjectTemplateDialog.Size" timestamp="1601356919674">
-      <screen x="0" y="23" width="1920" height="1112" />
+    <state x="560" y="319" key="Rider.ProjectTemplateDialog.Size" timestamp="1601433432340">
+      <screen x="0" y="23" width="1920" height="1114" />
     </state>
     <state x="560" y="318" key="Rider.ProjectTemplateDialog.Size/0.23.1920.1112@0.23.1920.1112" timestamp="1601356919674" />
+    <state x="560" y="319" key="Rider.ProjectTemplateDialog.Size/0.23.1920.1114@0.23.1920.1114" timestamp="1601433432340" />
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1601456625706">
+      <screen x="0" y="23" width="1920" height="1115" />
+    </state>
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.23.1920.1115@0.23.1920.1115" timestamp="1601456625706" />
   </component>
 </project>
