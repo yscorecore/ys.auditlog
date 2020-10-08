@@ -4,6 +4,7 @@ namespace YS.AuditLog
 {
     public interface IAuditLogContext
     {
-        string CurrentUserName();
+        string UserName { get; }
+        string RequestIp { get; }
     }
 }

@@ -1,9 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
+
     <ItemGroup>
         <PackageReference Include="YS.Knife.Hosting" Version="1.3.0" />
         <PackageReference Include="YS.Knife.Test" Version="1.3.0" />
     </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\..\src\YS.Hello\YS.Hello.csproj" />
-    </ItemGroup>
+
+
 </Project>

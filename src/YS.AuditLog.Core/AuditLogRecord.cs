@@ -9,10 +9,15 @@ namespace YS.AuditLog
         public string Id { get; set; }
         
         public string Operator { get; set; }
+
+        public string ApplicationName { get; set; }
+
+        public string FunctionName { get; set; }
         
-        public string Category { get; set; }
-        
-        public string OperationCode { get; set; }
+        public string OperationName { get; set; }
+        public string RequestIp { get; set; }
+
+        public string Message { get; set; }
 
         public bool Success { get; set; }
         
@@ -20,9 +25,9 @@ namespace YS.AuditLog
         
         public DateTimeOffset EndTime { get; set; }
 
-        public Dictionary<string, Object> Arguments { get; set; }
+        public Dictionary<string, object> Arguments { get; set; }
 
-        public Object Result { get; set; }
+        public object Result { get; set; }
         
     }
 }

@@ -1,6 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Hello.UnitTest
+namespace YS.AuditLog.Core.UnitTest
 {
     [TestClass]
     public class UnitTest1
