@@ -2,7 +2,7 @@
 
     <ItemGroup>
         <PackageReference Include="YS.Knife.Hosting" Version="1.3.0" />
-        <PackageReference Include="YS.Knife.Test" Version="1.3.0" />
+        <PackageReference Include="YS.Knife.Test" Version="1.3.2" />
     </ItemGroup>
 
 
