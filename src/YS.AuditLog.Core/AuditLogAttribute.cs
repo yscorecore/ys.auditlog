@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using AspectCore.DynamicProxy;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using YS.AuditLog.Core;
 using YS.Knife.Aop;
 using YS.Time;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace YS.AuditLog
 {
     public class AuditLogAttribute : BaseAopAttribute
     {
+        public AuditLogAttribute(string message)
+        {
+            this.Message = message;
+        }
         public string Message { get; set; }
         public string OperationName { get; set; }
         public string ApplicationName { get; set; }
@@ -32,6 +36,7 @@ namespace YS.AuditLog
                 OperationName = this.OperationName ?? context.ServiceMethod.Name,
                 StartTime = await timeService.Current(),
                 Operator = Thread.CurrentPrincipal?.Identity?.Name,
+                RequestIp = "127.0.0.1",
                 Arguments = buildInputArguments(context)
             };
             try
@@ -40,7 +45,7 @@ namespace YS.AuditLog
                 record.Success = true;
                 record.Message = this.BuildMessage(context);
                 record.EndTime = await timeService.Current();
-                record.Result = buildResult(context.ReturnValue);
+                record.Result = buildResult(context);
                 await auditLogService.LogRecord(record);
             }
             catch (Exception e)
@@ -48,7 +53,7 @@ namespace YS.AuditLog
                 record.Message = e.Message;
                 record.Success = false;
                 record.EndTime = await timeService.Current();
-                record.Result = buildResult(e);
+                record.Result = ExceptionInfo.FromException(e);
                 await auditLogService.LogRecord(record);
                 throw;
             }
@@ -56,16 +61,18 @@ namespace YS.AuditLog
 
         private Dictionary<string, object> buildInputArguments(AspectContext context)
         {
-            return null;
+            return context.ServiceMethod.GetParameters()
+                .Zip(context.Parameters, (k, v) => new KeyValuePair<string, object>(k.Name, v))
+                 .ToDictionary(p => p.Key, p => p.Value);
         }
 
-        private object buildResult(object objectOrException)
+        private object buildResult(AspectContext context)
         {
-            return null;
+            return context.IsAsync() ? context.UnwrapAsyncReturnValue().Result : context.ReturnValue;
         }
-        private string BuildMessage(AspectContext context)
+        private string BuildMessage(AspectContext _)
         {
-            throw new NotImplementedException();
+            return this.Message;
         }
     }
 }
