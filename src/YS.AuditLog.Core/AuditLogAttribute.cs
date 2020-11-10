@@ -1,23 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using AspectCore.DynamicProxy;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using YS.Knife.Aop;
 using YS.Time;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace YS.AuditLog
 {
     public class AuditLogAttribute : BaseAopAttribute
     {
-        public string ApplicationCode { get; }
-        public string ModuleCode { get; }
-        public string OperationCode { get; }
-        
-        public string Message { get; }
-
+        public AuditLogAttribute(string message)
+        {
+            this.Message = message;
+        }
+        public string Message { get; set; }
+        public string OperationName { get; set; }
+        public string ApplicationName { get; set; }
+        public string FunctionName { get; set; }
         public override async Task Invoke(AspectContext context, AspectDelegate next)
         {
             _ = context ?? throw new ArgumentNullException(nameof(context));
@@ -27,27 +30,30 @@ namespace YS.AuditLog
 
             var record = new AuditLogRecord
             {
-                ApplicationCode =this.GetApplicationCode(context),
-                ModuleCode = this.GetModuleCode(context),
-                OperationCode = this.GetOperationCode(context),
+                ApplicationName =
+                    this.ApplicationName ?? context.ServiceProvider.GetRequiredService<IHostEnvironment>().ApplicationName,
+                FunctionName = this.FunctionName ?? context.ImplementationMethod.DeclaringType.FullName,
+                OperationName = this.OperationName ?? context.ServiceMethod.Name,
                 StartTime = await timeService.Current(),
                 Operator = Thread.CurrentPrincipal?.Identity?.Name,
+                RequestIp = "127.0.0.1",
                 Arguments = buildInputArguments(context)
             };
             try
             {
                 await next.Invoke(context);
                 record.Success = true;
+                record.Message = this.BuildMessage(context);
                 record.EndTime = await timeService.Current();
-                record.Result = buildResult(context.ReturnValue);
+                record.Result = buildResult(context);
                 await auditLogService.LogRecord(record);
             }
             catch (Exception e)
             {
-                record.Success = false;
                 record.Message = e.Message;
+                record.Success = false;
                 record.EndTime = await timeService.Current();
-                record.Result = buildResult(e);
+                record.Result = ExceptionInfo.FromException(e);
                 await auditLogService.LogRecord(record);
                 throw;
             }
@@ -55,39 +61,18 @@ namespace YS.AuditLog
 
         private Dictionary<string, object> buildInputArguments(AspectContext context)
         {
-            return null;
+            return context.ServiceMethod.GetParameters()
+                .Zip(context.Parameters, (k, v) => new KeyValuePair<string, object>(k.Name, v))
+                 .ToDictionary(p => p.Key, p => p.Value);
         }
 
-        private object buildResult(object objectOrException)
+        private object buildResult(AspectContext context)
         {
-            return null;
+            return context.IsAsync() ? context.UnwrapAsyncReturnValue().Result : context.ReturnValue;
         }
-
-        protected virtual  string GetApplicationCode(AspectContext context)
+        private string BuildMessage(AspectContext _)
         {
-            if (string.IsNullOrEmpty(this.ApplicationCode))
-            {
-                return context?.ServiceProvider.GetRequiredService<IHostEnvironment>().ApplicationName;
-            }
-            return this.ApplicationCode;
-        }
-
-        protected virtual  string GetModuleCode(AspectContext context)
-        {
-            if (string.IsNullOrEmpty(this.ModuleCode))
-            {
-                return context?.ServiceMethod.DeclaringType?.FullName;
-            }
-            return this.ModuleCode;
-        }
-
-        protected virtual string GetOperationCode(AspectContext context)
-        {
-            if (string.IsNullOrEmpty(this.OperationCode))
-            {
-                return context?.ServiceMethod.Name;
-            }
-            return this.OperationCode;
+            return this.Message;
         }
     }
 }
