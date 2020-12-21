@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <ItemGroup>
-        <PackageReference Include="YS.Knife.Hosting" Version="1.3.2" />
+        <PackageReference Include="YS.Knife.Hosting" Version="2.0.0" />
         <PackageReference Include="YS.Knife.Test" Version="1.3.2" />
         <PackageReference Include="YS.Time.Impl.Local" Version="1.2.0" />
     </ItemGroup>
